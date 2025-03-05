@@ -1,0 +1,93 @@
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+const Agendamentos = () => {
+  const [agendamento, setAgendamento] = useState({
+    data: "",
+    hora: "",
+    medico: "",
+  });
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    setAgendamento({ ...agendamento, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const token = localStorage.getItem("token");
+
+    try {
+      const response = await fetch("http://localhost:5001/api/appointments", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(agendamento),
+      });
+
+      if (response.ok) {
+        alert("Agendamento realizado com sucesso!");
+        setAgendamento({ data: "", hora: "", medico: "" });
+      } else {
+        alert("Erro ao agendar consulta.");
+      }
+    } catch (error) {
+      console.error("Erro ao enviar agendamento:", error);
+    }
+
+    navigate("/user-menu"); // Redireciona para o menu do usuário
+  };
+
+  return (
+    <div>
+      <h2>Agendar Consulta</h2>
+      <form onSubmit={handleSubmit}>
+        <label>Data:</label>
+        <input
+          type="date"
+          name="data"
+          value={agendamento.data}
+          onChange={handleChange}
+          required
+        />
+
+        <label>Horário:</label>
+        <input
+          type="time"
+          name="hora"
+          value={agendamento.hora}
+          onChange={handleChange}
+          required
+        />
+
+        <label>Médico:</label>
+        <select
+          name="medico"
+          value={agendamento.medico}
+          onChange={handleChange}
+          required
+        >
+          <option value="">Selecione um médico</option>
+          <option value="Dr. Roberto M">Dr. Roberto M.</option>
+          <option value="Dra. Fernanda M">Dra. Fernanda M.</option>
+          <option value="Dr. Julia S">Dra. Julia S.</option>
+        </select>
+
+        {/* <label>Médico:</label>
+        <input
+          type="text"
+          name="medico"
+          value={agendamento.medico}
+          onChange={handleChange}
+          required
+        /> */}
+
+        <button type="submit">Agendar</button>
+      </form>
+    </div>
+  );
+};
+
+export default Agendamentos;

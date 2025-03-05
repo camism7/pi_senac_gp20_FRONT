@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit; /* cor dos links sera herdada*/
+  text-decoration: none; /*tag link:nao vai ter underline*/
+}
+
+body {
+  background-color: #6c63ff;
+}
+
+.secao-inicio-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 150px;
+  padding: 20px 20px 100px 20px;
+  /*espaçamento interno sentido horario*/
+  color: #fff;
+  font-size: small;
+}
+
+.secao-inicio-nav header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.secao-inicio-nav header > img {
+  /* header > img= imagem filha do header*/
+  max-width: 120px;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.secao-inicio-nav header nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  font: 500 15px;
+}
+
+.secao-inicio-nav header a .botao-entrar {
+  font: 600 12px "noto sans";
+  background-color: #68e3d6;
+  border: none;
+  border-radius: 50px;
+  /*borda arrendondada*/
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.secao-inicio-nav main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 50px;
+}
+
+.secao-inicio-nav main > div {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.secao-inicio-nav main > div h1 {
+  font: 900 50px/50px "noto sans";
+  text-transform: uppercase;
+  /*tudo maiusculo*/
+}
+
+.secao-inicio-nav main > div p {
+  font: 600 16px/18px "noto sans";
+}
+
+.secao-inicio-nav main > img {
+  width: 600px;
+  border-radius: 20px;
+}
+
+.secao-inicio-nav .botoes {
+  /* classes sao formatados com (.) no inicio*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.secao-inicio-nav .botoes button {
+  font: 900 18px/22px "noto sans";
+  text-transform: uppercase;
+  max-width: 360px;
+  width: 31%;
+  height: 100px;
+  padding: 30px;
+  background-color: #fff;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 5px 5px 0 1px #57f287;
+  /*sombra nos botoes*/
+}
+
+/* css de responsividade da primeira parte sempre no final do CSS*/
+
+@media (max-width: 1024px) {
+  .secao-inicio-nav {
+    padding: 20px 50px 100px 20px;
+    gap: 110px;
+  }
+
+  .secao-inicio-nav main {
+    max-width: none;
+  }
+  .secao-inicio-nav main > div p {
+    font: 700 14px/22px "noto sans";
+  }
+  .secao-inicio-nav .botoes button {
+    max-width: unset;
+  }
+  .secao-inicio-nav .botoes button {
+    width: calc(50% - 20px);
+    max-width: unset;
+    font: 900 16px/22px "noto sans";
+  }
+  .secao-inicio-nav header nav {
+    display: none;
+  }
+  .secao-inicio-nav main > img {
+    display: none;
+  }
+}
+
+.body-cadastro {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0c0ce94d;
+}
+
+.container-cadastro {
+  width: 80%;
+  height: 80vh;
+  display: flex;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+}
+
+.form-image-cadastro {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  background-color: #fde3a7a7;
+  padding: 1rem;
+}
+
+.form-image-cadastro {
+  width: 40rem;
+}
+
+.form-cadastro {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 3rem;
+}
+
+.form-header-cadastro {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-header-cadastro h1::after {
+  content: "";
+  display: block;
+  width: 5rem;
+  height: 0.3 rem;
+  background-color: #6c63ff;
+  margin: 0 auto;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.input-group-cadastro {
+  display: flex;
+  flex-wrap: wrap; /* quebrar um do lado do outro*/
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.input-box-cadastro {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.1rem;
+}
+
+.input-box-cadastro input {
+  margin: 0.6 rem 0;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px #0000001c;
+}
+
+.input-box-cadastro input:hover {
+  /*mudar de cor quando passar o mouse*/
+  background-color: #4f4b4b75;
+}
+
+.input-box-cadastro input:focus-visible {
+  outline: 1px solid #6c63ff;
+}
+
+.input-box-cadastro label,
+.gender-title h6 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #000000c0;
+}
+
+.input-box-cadastro input::placeholder {
+  color: #000000be;
+}
+
+.gender-group-cadastro {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.62rem;
+  padding: 0 0.5 rem;
+}
+
+.gender-input-cadastro {
+  display: flex;
+  align-items: center;
+}
+
+.gender-input-cadastro input {
+  margin-right: 0.35 rem;
+}
+
+.gender-input-cadastro label {
+  font-size: 0.81rem;
+  font-weight: 600;
+  color: #000000c0;
+}
+
+.continue-button-cadastro button {
+  width: 100%;
+  margin-top: 2.5rem;
+  border: none;
+  background-color: #6c63ff;
+  padding: 0.62rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.continue-button-cadastro button:hover {
+  background-color: #46464e;
+}
+
+.continue-button-cadastro button a {
+  text-decoration: none;
+  font-size: 0.93rem;
+  font-weight: 500; /* grossura*/
+  color: #fff;
+}
+
+.continue-button-cadastro p {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500; /* grossura*/
+  align-items: center;
+}
+
+/*responsividade de telas*/
+@media screen and (max-width: 1330px) {
+  .form-image-cadastro {
+    display: none;
+  }
+
+  .container-cadastro {
+    width: 50%;
+  }
+
+  .form-cadastro {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1064px) {
+  .container-cadastro {
+    width: 90%;
+    height: auto;
+  }
+  .input-group-cadastro {
+    flex-direction: column;
+    overflow-y: scroll; /*coluna que correm na tela*/
+    flex-wrap: nowrap;
+    max-height: 10rem;
+    padding-right: 5rem;
+  }
+  .gender-group-cadastro {
+    flex-direction: column;
+  }
+  .gender-input-cadastro {
+    margin-top: 0.5rem;
+  }
+}

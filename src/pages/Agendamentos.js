@@ -70,9 +70,9 @@ const Agendamentos = () => {
           required
         >
           <option value="">Selecione um médico</option>
-          <option value="Dr. Roberto M">Dr. Roberto M.</option>
-          <option value="Dra. Fernanda M">Dra. Fernanda M.</option>
-          <option value="Dr. Julia S">Dra. Julia S.</option>
+          <option value="Dra. Selton M">Dr. Selton M.</option>
+          <option value="Dra. Fernanda T">Dra. Fernanda M.</option>
+          <option value="Dra. Julia S">Dra. Julia S.</option>
         </select>
 
         {/* <label>Médico:</label>

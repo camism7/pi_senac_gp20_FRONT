@@ -21,10 +21,7 @@ function Login({ onLoginSuccess }) {
       const data = await response.json();
       if (response.ok) {
         localStorage.setItem("token", data.token);
-        // onLoginSuccess(); // Redireciona após login
-        // setTimeout(function () {
-        //   window.location.href = "/user-menu";
-        // }, 1000);
+        onLoginSuccess(); // setando o user logado
         navigate("/user-menu"); // Redireciona para o menu do usuário
       } else {
         setError(data.message || "Erro ao fazer login");

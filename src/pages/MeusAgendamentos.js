@@ -8,7 +8,7 @@ const MeusAgendamentos = () => {
       const token = localStorage.getItem("token");
 
       try {
-        const response = await fetch("http://localhost:5001/api/appointments", {
+        const response = await fetch("http://localhost:8080/agendamentos", {
           headers: { Authorization: `Bearer ${token}` },
         });
 

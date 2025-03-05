@@ -18,7 +18,7 @@ const Agendamentos = () => {
     const token = localStorage.getItem("token");
 
     try {
-      const response = await fetch("http://localhost:5001/api/appointments", {
+      const response = await fetch("http://localhost:8080/agendamentos", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -29,11 +29,12 @@ const Agendamentos = () => {
 
       if (response.ok) {
         alert("Agendamento realizado com sucesso!");
-        setAgendamento({ data: "", hora: "", medico: "" });
+        // setAgendamento({ data: "", hora: "", medico: "" });
       } else {
         alert("Erro ao agendar consulta.");
       }
     } catch (error) {
+      console.log(error);
       console.error("Erro ao enviar agendamento:", error);
     }
 

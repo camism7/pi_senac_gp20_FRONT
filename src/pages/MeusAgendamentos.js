@@ -16,11 +16,8 @@ const MeusAgendamentos = () => {
           const data = await response.json();
           setAgendamentos(data);
         } else {
-          console.error("Erro ao buscar agendamentos.");
         }
-      } catch (error) {
-        console.error("Erro ao carregar os agendamentos:", error);
-      }
+      } catch (error) {}
     };
 
     fetchAgendamentos();
@@ -33,7 +30,7 @@ const MeusAgendamentos = () => {
         <ul>
           {agendamentos.map((appt) => (
             <li key={appt._id}>
-              {appt.date} às {appt.time} com Dr(a). {appt.doctor}
+              {appt.data} às {appt.hora} com Dr(a). {appt.medico}
             </li>
           ))}
         </ul>

@@ -29,15 +29,10 @@ const Agendamentos = () => {
 
       if (response.ok) {
         alert("Agendamento realizado com sucesso!");
-        // setAgendamento({ data: "", hora: "", medico: "" });
       } else {
         alert("Erro ao agendar consulta.");
       }
-    } catch (error) {
-      console.log(error);
-      console.error("Erro ao enviar agendamento:", error);
-    }
-
+    } catch (error) {}
     navigate("/user-menu"); // Redireciona para o menu do usuário
   };
 
@@ -72,18 +67,9 @@ const Agendamentos = () => {
         >
           <option value="">Selecione um médico</option>
           <option value="Dra. Selton M">Dr. Selton M.</option>
-          <option value="Dra. Fernanda T">Dra. Fernanda M.</option>
+          <option value="Dra. Fernanda T">Dra. Fernanda T.</option>
           <option value="Dra. Julia S">Dra. Julia S.</option>
         </select>
-
-        {/* <label>Médico:</label>
-        <input
-          type="text"
-          name="medico"
-          value={agendamento.medico}
-          onChange={handleChange}
-          required
-        /> */}
 
         <button type="submit">Agendar</button>
       </form>

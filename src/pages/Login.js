@@ -21,8 +21,8 @@ function Login({ onLoginSuccess }) {
       const data = await response.json();
       if (response.ok) {
         localStorage.setItem("token", data.token);
-        onLoginSuccess(); // setando o user logado
-        navigate("/user-menu"); // Redireciona para o menu do usuário
+        onLoginSuccess();
+        navigate("/user-menu");
       } else {
         setError(data.message || "Erro ao fazer login");
       }

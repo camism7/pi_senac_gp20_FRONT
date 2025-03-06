@@ -1,9 +1,8 @@
 import "../styles/styles.css";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import imagem2 from "../images/undraw_medicine_hqqg.svg";
 import { Link } from "react-router-dom";
-// import { Link } from "react-router-dom";
-// import Navbar from "../components/Navbar";
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +10,7 @@ const Register = () => {
     email: "",
     senha: "",
   });
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -27,9 +27,10 @@ const Register = () => {
     const message = await response.text();
     alert(message);
 
-    setTimeout(function () {
-      window.location.href = "/Login ";
-    }, 1000);
+    // setTimeout(function () {
+    //   window.location.href = "/Login ";
+    // }, 1000);
+    navigate("/Login");
   };
 
   return (

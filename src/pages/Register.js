@@ -34,21 +34,21 @@ const Register = () => {
   };
 
   return (
-    <section class="body-cadastro">
-      <div class="container-cadastro">
-        <div class="form-image-cadastro">
+    <section className="body-cadastro">
+      <div className="container-cadastro">
+        <div className="form-image-cadastro">
           <img alt="imagem medicine" src={imagem2} />
         </div>
-        <div class="form-cadastro">
+        <div className="form-cadastro">
           <form onSubmit={handleSubmit}>
-            <div class="form-header">
-              <div class="title-cadastro">
+            <div className="form-header">
+              <div className="title-cadastro">
                 <h1>Formulário de Cadastro</h1>
               </div>
             </div>
 
-            <div class="input-group-cadastro">
-              <div class="input-box-cadastro">
+            <div className="input-group-cadastro">
+              <div className="input-box-cadastro">
                 <label for="firstname">Primeiro Nome</label>
                 <input
                   type="text"
@@ -59,7 +59,7 @@ const Register = () => {
                 />{" "}
               </div>
 
-              <div class="input-box-cadastro">
+              <div className="input-box-cadastro">
                 <label for="lastname">Sobrenome</label>
                 <input
                   type="text"
@@ -70,7 +70,7 @@ const Register = () => {
                 />{" "}
               </div>
 
-              <div class="input-box-cadastro">
+              <div className="input-box-cadastro">
                 <label for="email">Email</label>
                 <input
                   type="text"
@@ -81,7 +81,7 @@ const Register = () => {
                 />{" "}
               </div>
 
-              <div class="input-box-cadastro">
+              <div className="input-box-cadastro">
                 <label for="password">Senha</label>
                 <input
                   type="text"
@@ -93,14 +93,14 @@ const Register = () => {
               </div>
             </div>
 
-            <div class="continue-button-cadastro">
-              <button type="submit" class="btn btn-light">
+            <div className="continue-button-cadastro">
+              <button type="submit" className="btn btn-light">
                 Confirmar
               </button>{" "}
-              <div class="voltar">
+              <div className="voltar">
                 <Link to="/">
                   {" "}
-                  <button type="button" class="btn btn-light">
+                  <button type="button" className="btn btn-light">
                     Voltar
                   </button>
                 </Link>

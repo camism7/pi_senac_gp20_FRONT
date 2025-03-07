@@ -5,7 +5,7 @@ import imagem1 from "../images/psicologia imagem.png";
 function Home({ isLogged }) {
   return (
     <main>
-      <section class="secao-inicio-nav">
+      <section className="secao-inicio-nav">
         <main>
           <div>
             <div> {isLogged ? <h2>Bem-vindo(a)!</h2> : ""} </div>
@@ -33,7 +33,7 @@ function Home({ isLogged }) {
           <img src={imagem1} alt="caixa cheia de opçoes" />
         </main>
 
-        <div class="botoes">
+        <div className="botoes">
           <button>Central de Segurança</button>
           <button>central de Privacidade</button>
           <button>Central dos Pais</button>

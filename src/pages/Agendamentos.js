@@ -37,7 +37,7 @@ const Agendamentos = () => {
   };
 
   return (
-    <div>
+    <div className="agendamentos-container">
       <h2>Agendar Consulta</h2>
       <form onSubmit={handleSubmit}>
         <label>Data:</label>

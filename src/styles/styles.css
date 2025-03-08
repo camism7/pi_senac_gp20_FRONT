@@ -97,6 +97,144 @@ body {
   box-shadow: 5px 5px 0 1px #57f287;
 }
 
+/*Estilo da tela de Menu de Usuários*/
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.container p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.container li {
+  margin-bottom: 15px;
+}
+
+.container a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #6c63ff;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.container a:hover {
+  background-color: #4a45a3;
+}
+
+/* Estilos para MeusAgendamentos */
+.meus-agendamentos-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.meus-agendamentos-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.meus-agendamentos-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.meus-agendamentos-container li {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  font-size: 16px;
+  color: #555;
+}
+
+.meus-agendamentos-container li:last-child {
+  border-bottom: none;
+}
+
+.meus-agendamentos-container p {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+}
+
+/* Estilos para Agendamentos */
+.agendamentos-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.agendamentos-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.agendamentos-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.agendamentos-container label {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+.agendamentos-container input[type="date"],
+.agendamentos-container input[type="time"],
+.agendamentos-container select {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.agendamentos-container button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #6c63ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.agendamentos-container button:hover {
+  background-color: #4a45a3;
+}
+
 /* CSS TELA REGISTER */
 .body-cadastro {
   width: 100%;
@@ -440,5 +578,111 @@ body {
 
   .continue-button-cadastro button {
     font-size: 1rem;
+  }
+}
+
+/*Media query do Menu de Usuário (responsivo)*/
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+    margin: 30px auto;
+    padding: 15px;
+  }
+
+  .container h2 {
+    font-size: 20px;
+  }
+
+  .container p {
+    font-size: 14px;
+  }
+
+  .container a {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container a {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+  }
+}
+
+/* Media queries para MeusAgendamentos (responsivo) */
+@media (max-width: 768px) {
+  .meus-agendamentos-container {
+    max-width: 90%;
+    margin: 30px auto;
+    padding: 15px;
+  }
+
+  .meus-agendamentos-container h2 {
+    font-size: 20px;
+  }
+
+  .meus-agendamentos-container li {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .meus-agendamentos-container p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .meus-agendamentos-container {
+    padding: 10px;
+  }
+
+  .meus-agendamentos-container li {
+    padding: 8px;
+  }
+}
+
+/* Media queries para Agendamentos (responsivo)*/
+@media (max-width: 768px) {
+  .agendamentos-container {
+    max-width: 90%;
+    margin: 30px auto;
+    padding: 15px;
+  }
+
+  .agendamentos-container h2 {
+    font-size: 20px;
+  }
+
+  .agendamentos-container input[type="date"],
+  .agendamentos-container input[type="time"],
+  .agendamentos-container select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .agendamentos-container button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .agendamentos-container {
+    padding: 10px;
+  }
+
+  .agendamentos-container input[type="date"],
+  .agendamentos-container input[type="time"],
+  .agendamentos-container select {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .agendamentos-container button {
+    font-size: 12px;
+    padding: 6px 12px;
   }
 }

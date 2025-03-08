@@ -80,7 +80,7 @@ const Register = () => {
               <div className="input-box-cadastro">
                 <label for="password">Senha</label>
                 <input
-                  type="text"
+                  type="password"
                   name="senha"
                   placeholder="Senha"
                   onChange={handleChange}

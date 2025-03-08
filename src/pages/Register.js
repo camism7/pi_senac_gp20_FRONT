@@ -26,10 +26,6 @@ const Register = () => {
 
     const message = await response.text();
     alert(message);
-
-    // setTimeout(function () {
-    //   window.location.href = "/Login ";
-    // }, 1000);
     navigate("/Login");
   };
 

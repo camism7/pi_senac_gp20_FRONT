@@ -33,19 +33,18 @@ function App() {
   return (
     <div>
       <Navbar isLoggedIn={isLoggedIn} onLogout={handleLogout} />
-      <div className="cover-container">
-        <Routes>
-          <Route path="/" element={<Home isLogged={isLoggedIn} />} />
-          <Route path="/register" element={<Register />} />
-          <Route
-            path="/login"
-            element={<Login onLoginSuccess={handleLoginSuccess} />}
-          />
-          <Route path="/agendamentos" element={<Agendamentos />} />
-          <Route path="/meus-agendamentos" element={<MeusAgendamentos />} />
-          <Route path="/user-menu" element={<UserMenu />} />
-        </Routes>
-      </div>
+
+      <Routes>
+        <Route path="/" element={<Home isLogged={isLoggedIn} />} />
+        <Route path="/register" element={<Register />} />
+        <Route
+          path="/login"
+          element={<Login onLoginSuccess={handleLoginSuccess} />}
+        />
+        <Route path="/agendamentos" element={<Agendamentos />} />
+        <Route path="/meus-agendamentos" element={<MeusAgendamentos />} />
+        <Route path="/user-menu" element={<UserMenu />} />
+      </Routes>
     </div>
   );
 }

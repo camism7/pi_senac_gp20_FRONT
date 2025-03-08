@@ -1,14 +1,14 @@
-import "../styles/styles.css";
 import React from "react";
+import "../styles/styles.css";
 import imagem1 from "../images/psicologia imagem.png";
 
 function Home({ isLogged }) {
   return (
     <main>
-      <section className="secao-inicio-nav">
-        <main>
-          <div>
-            <div> {isLogged ? <h2>Bem-vindo(a)!</h2> : ""} </div>
+      <section className="home-container">
+        <div className="home-content">
+          <div className="home-text">
+            {isLogged && <h2>Bem-vindo(a)!</h2>}
             <h1>Cuidando da mente, transformando vidas.</h1>
             <p>
               O atendimento psicológico é fundamental para promover a saúde
@@ -30,15 +30,19 @@ function Home({ isLogged }) {
               coletivos de maneira mais eficaz.
             </p>
           </div>
-          <img src={imagem1} alt="caixa cheia de opçoes" />
-        </main>
+          <img
+            src={imagem1}
+            alt="Imagem sobre psicologia"
+            className="home-image"
+          />
+        </div>
 
-        <div className="botoes">
+        <div className="home-buttons">
           <button>Central de Segurança</button>
-          <button>central de Privacidade</button>
+          <button>Central de Privacidade</button>
           <button>Central dos Pais</button>
           <button>Central de Transparência</button>
-          <button>Central de Noticias</button>
+          <button>Central de Notícias</button>
           <button>Central de Políticas</button>
         </div>
       </section>

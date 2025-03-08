@@ -1,105 +1,91 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Gothic&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+/* PÁGINA TODA */
 * {
   margin: 0px;
   box-sizing: border-box;
 }
 
 a {
-  color: inherit; /* cor dos links sera herdada*/
-  text-decoration: none; /*tag link:nao vai ter underline*/
+  color: inherit;
+  text-decoration: none;
 }
 
 body {
   background-color: #6c63ff;
 }
 
-.secao-inicio-nav {
+/* CSS DA NAVBAR */
+.navbar-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 150px;
-  padding: 20px 20px 100px 20px;
-  /*espaçamento interno sentido horario*/
-  color: #fff;
-  font-size: small;
-}
-
-.secao-inicio-nav header {
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  max-width: 1200px;
+  align-items: center;
+  padding: 20px;
+  background-color: #6c63ff;
+  color: #fff;
   width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
 }
 
-.secao-inicio-nav header > img {
-  /* header > img= imagem filha do header*/
+.navbar-logo {
   max-width: 120px;
-  width: 100%;
   border-radius: 20px;
 }
 
-.secao-inicio-nav header nav {
+.navbar-menu {
   display: flex;
-  flex-direction: row;
-  align-items: center;
   gap: 20px;
-  font: 500 15px;
+  font-size: 15px;
 }
 
-.secao-inicio-nav header a .botao-entrar {
-  font: 600 12px "noto sans";
-  background-color: #68e3d6;
-  border: none;
-  border-radius: 50px;
-  /*borda arrendondada*/
-  padding: 10px 15px;
+.menu-icon {
+  display: none;
+  font-size: 24px;
   cursor: pointer;
 }
 
-.secao-inicio-nav main {
+/* CSS TELA HOME */
+.home-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+  background-color: #6c63ff;
+}
+
+.home-content {
+  display: flex;
   justify-content: space-between;
+  align-items: center;
   max-width: 1200px;
   width: 100%;
   gap: 50px;
 }
 
-.secao-inicio-nav main > div {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+.home-text {
+  flex: 1;
 }
 
-.secao-inicio-nav main > div h1 {
-  font: 900 50px/50px "noto sans";
-  text-transform: uppercase;
-  /*tudo maiusculo*/
-}
-
-.secao-inicio-nav main > div p {
-  font: 600 16px/18px "noto sans";
-}
-
-.secao-inicio-nav main > img {
-  width: 600px;
+.home-image {
+  max-width: 600px;
   border-radius: 20px;
 }
 
-.secao-inicio-nav .botoes {
-  /* classes sao formatados com (.) no inicio*/
+/* Botões */
+.home-buttons {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   gap: 20px;
   max-width: 1200px;
   width: 100%;
+  margin-top: 20px;
 }
 
-.secao-inicio-nav .botoes button {
-  font: 900 18px/22px "noto sans";
+.home-buttons button {
+  font-weight: 900;
   text-transform: uppercase;
   max-width: 360px;
   width: 31%;
@@ -109,39 +95,9 @@ body {
   border: none;
   border-radius: 12px;
   box-shadow: 5px 5px 0 1px #57f287;
-  /*sombra nos botoes*/
 }
 
-/* css de responsividade da primeira parte sempre no final do CSS*/
-
-@media (max-width: 1024px) {
-  .secao-inicio-nav {
-    padding: 20px 50px 100px 20px;
-    gap: 110px;
-  }
-
-  .secao-inicio-nav main {
-    max-width: none;
-  }
-  .secao-inicio-nav main > div p {
-    font: 700 14px/22px "noto sans";
-  }
-  .secao-inicio-nav .botoes button {
-    max-width: unset;
-  }
-  .secao-inicio-nav .botoes button {
-    width: calc(50% - 20px);
-    max-width: unset;
-    font: 900 16px/22px "noto sans";
-  }
-  .secao-inicio-nav header nav {
-    display: none;
-  }
-  .secao-inicio-nav main > img {
-    display: none;
-  }
-}
-
+/* CSS TELA REGISTER */
 .body-cadastro {
   width: 100%;
   height: 100vh;
@@ -199,7 +155,7 @@ body {
 
 .input-group-cadastro {
   display: flex;
-  flex-wrap: wrap; /* quebrar um do lado do outro*/
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 1rem 0;
 }
@@ -219,7 +175,6 @@ body {
 }
 
 .input-box-cadastro input:hover {
-  /*mudar de cor quando passar o mouse*/
   background-color: #4f4b4b75;
 }
 
@@ -277,19 +232,118 @@ body {
 .continue-button-cadastro button a {
   text-decoration: none;
   font-size: 0.93rem;
-  font-weight: 500; /* grossura*/
+  font-weight: 500;
   color: #fff;
 }
 
 .continue-button-cadastro p {
   text-decoration: none;
   font-size: 1rem;
-  font-weight: 500; /* grossura*/
+  font-weight: 500;
   align-items: center;
 }
 
-/*responsividade de telas*/
- @media screen and (max-width: 1330px) {
+/* Responsividade da Navbar */
+@media (max-width: 1024px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #6c63ff;
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .navbar-menu.open {
+    display: flex;
+  }
+
+  .navbar-menu a,
+  .navbar-menu button {
+    display: block;
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+/* RESPONSIVIDADE HOME */
+@media (max-width: 1024px) {
+  .home-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-image {
+    max-width: 90%;
+  }
+
+  .home-buttons button {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .home-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-buttons button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-content h1 {
+    font-size: 24px;
+  }
+
+  .home-content p {
+    font-size: 14px;
+  }
+
+  .home-image {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .secao-inicio-nav {
+    padding: 20px 50px 100px 20px;
+    gap: 110px;
+  }
+
+  .secao-inicio-nav main {
+    max-width: none;
+  }
+  .secao-inicio-nav main > div p {
+    font: 700 14px/22px "noto sans";
+  }
+  .secao-inicio-nav .botoes button {
+    max-width: unset;
+  }
+  .secao-inicio-nav .botoes button {
+    width: calc(50% - 20px);
+    max-width: unset;
+    font: 900 16px/22px "noto sans";
+  }
+  .secao-inicio-nav header nav {
+    display: none;
+  }
+  .secao-inicio-nav main > img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1330px) {
   .form-image-cadastro {
     display: none;
   }
@@ -301,9 +355,9 @@ body {
   .form-cadastro {
     width: 100%;
   }
-} 
+}
 
- @media screen and (max-width: 1064px) {
+@media screen and (max-width: 1064px) {
   .container-cadastro {
     width: 90%;
     height: auto;
@@ -321,7 +375,7 @@ body {
   .gender-input-cadastro {
     margin-top: 0.5rem;
   }
-} 
+}
 
 @media screen and (max-width: 1044px) {
   .secao-inicio-nav-menudrop {

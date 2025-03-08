@@ -112,6 +112,91 @@ body {
   /*sombra nos botoes*/
 }
 
+/*Estilo da tela de Menu de Usuários*/
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.container p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.container li {
+  margin-bottom: 15px;
+}
+
+.container a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #6c63ff;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.container a:hover {
+  background-color: #4a45a3;
+}
+
+/* Estilos para MeusAgendamentos */
+.meus-agendamentos-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.meus-agendamentos-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.meus-agendamentos-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.meus-agendamentos-container li {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  font-size: 16px;
+  color: #555;
+}
+
+.meus-agendamentos-container li:last-child {
+  border-bottom: none;
+}
+
+.meus-agendamentos-container p {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+}
+
 /* css de responsividade da primeira parte sempre no final do CSS*/
 
 @media (max-width: 1024px) {
@@ -320,5 +405,68 @@ body {
   }
   .gender-input-cadastro {
     margin-top: 0.5rem;
+  }
+}
+
+/*Media query do Menu de Usuário (responsivo)*/
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+    margin: 30px auto;
+    padding: 15px;
+  }
+
+  .container h2 {
+    font-size: 20px;
+  }
+
+  .container p {
+    font-size: 14px;
+  }
+
+  .container a {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container a {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+  }
+}
+
+/* Media queries para MeusAgendamentos (responsivo) */
+@media (max-width: 768px) {
+  .meus-agendamentos-container {
+    max-width: 90%;
+    margin: 30px auto;
+    padding: 15px;
+  }
+
+  .meus-agendamentos-container h2 {
+    font-size: 20px;
+  }
+
+  .meus-agendamentos-container li {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .meus-agendamentos-container p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .meus-agendamentos-container {
+    padding: 10px;
+  }
+
+  .meus-agendamentos-container li {
+    padding: 8px;
   }
 }

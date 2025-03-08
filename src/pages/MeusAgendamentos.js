@@ -24,7 +24,7 @@ const MeusAgendamentos = () => {
   }, []);
 
   return (
-    <div>
+    <div className="meus-agendamentos-container">
       <h2>Meus Agendamentos</h2>
       {agendamentos.length > 0 ? (
         <ul>
